@@ -8,6 +8,8 @@ import Login from "../Pages/Login";
 
 import MyProfile from "../Pages/MyProfile";
 import Error from "../Pages/Error";
+import SkillsDetails from "../Pages/SkillsDetails";
+import Registration from "../Pages/Registration";
  export const router = createBrowserRouter([
   {
     path: "/",
@@ -18,11 +20,13 @@ children:[
         path:"",
         Component: Home,
      loader:()=>fetch("/public/Popular Skills.json"),
-     children:[
-      {
-        
-      }
-     ]
+    
+    },
+    {
+      path:'/skill/:id',
+      Component: SkillsDetails,
+      loader:()=>fetch("/public/Popular Skills.json"),
+
     },
     {
       path:"/myProfile",
@@ -34,6 +38,10 @@ children:[
   {
     path:"/login",
     Component: Login,
+  },
+  {
+    path:'/registration',
+    Component: Registration,
   },
   {
     path:"*",

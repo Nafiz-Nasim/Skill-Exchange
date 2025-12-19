@@ -20,7 +20,7 @@ export default function Nav() {
               tabIndex="-1"
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
               <li><Link to={'/'}>Homepage</Link></li>
-              <li><Link to={'/myProfile'}>Portfolio</Link></li>
+              <li><Link to={'/myProfile'}>Profile</Link></li>
               <li><a>About</a></li>
             </ul>
           </div>
@@ -35,6 +35,7 @@ export default function Nav() {
       {/* Right side login button */}
       <div className="right">
         <Link to={'/login'}> <button className="btn btn-neutral">Login</button></Link>
+        <Link to={'/registration'}> <button className="btn btn-dash">Don't have an account?</button></Link>
        
       </div>
     </section>
